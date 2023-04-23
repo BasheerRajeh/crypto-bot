@@ -48,7 +48,7 @@ bot.hears(Object.keys(coins), async (ctx) => {
             const options = { parse_mode: "Markdown", reply_markup: inlineKeyboard };
 
             // Send the message with the inline keyboard
-            ctx.reply(`\`${message}\``, options);
+            await ctx.reply(`\`${message}\``, options);
         }
     } catch (error) {
         console.error(error);
