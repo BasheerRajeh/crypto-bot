@@ -1,21 +1,26 @@
 const { Telegraf } = require("telegraf");
 const axios = require("axios");
+const express = require('express');
+
 require("dotenv").config();
 
 // Import coins object
 const coins = require("./commands/text_command/coins.js");
 const keywords = require("./commands/text_command/keywords.js");
 
+// Create app
+const app = express();
+
 // Create a new Telegraf bot
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-bot.hears(Object.keys(keywords), (ctx) => {
+bot.hears(Object.keys(keywords), async (ctx) => {
     const buttons = keywords[ctx.message.text.toLowerCase()];
     const inlineKeyboard = { inline_keyboard: buttons };
 
     const options = { reply_markup: inlineKeyboard };
 
-    ctx.reply("Select from the following", options);
+    await ctx.reply("Select from the following", options);
 });
 
 // Define a command handler for messages that match the coins object keys
@@ -48,7 +53,7 @@ bot.hears(Object.keys(coins), async (ctx) => {
             const options = { parse_mode: "Markdown", reply_markup: inlineKeyboard };
 
             // Send the message with the inline keyboard
-            ctx.reply(`\`${message}\``, options);
+            await ctx.reply(`\`${message}\``, options);
         }
     } catch (error) {
         console.error(error);
@@ -90,7 +95,7 @@ bot.action(Object.keys(coins), async (ctx) => {
             return await ctx.editMessageText(`\`${message}\``, options);
         } catch (error) {
             if (error.message.includes("message is not modified")) {
-                console.log("Message is not modified.");
+                // console.log("Message is not modified.");
             } else {
                 console.error(error);
             }
@@ -153,6 +158,20 @@ bot.catch((err, ctx) => {
     console.log(`Error occurred for user ${ctx.from.id}:`, err);
     // Do something to handle the error, such as sending an error message
 });
+
+
+app.get('/ping', (req, res) => {
+    res.send('pong');
+    bot.startPolling();
+});
+
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    // Start the bot
+    // console.log(`Server listening on port ${SERVER}:${PORT}`);
+});
+
 
 // Start the bot
 bot.startPolling();
