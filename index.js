@@ -105,6 +105,11 @@ bot.action(Object.keys(coins), async (ctx) => {
     }
 });
 
+bot.on('new_chat_members', (ctx) => {
+    // Delete the message that announces the user joined the group
+    ctx.deleteMessage();
+});
+
 function generateCoinMessage(coin, coinData) {
     // const coinData = data.data[coin.index];
     // console.log(coinData);
