@@ -110,6 +110,11 @@ bot.on('new_chat_members', (ctx) => {
     ctx.deleteMessage();
 });
 
+bot.on('left_chat_member', (ctx) => {
+    // Delete the message that announces the user left the group
+    ctx.deleteMessage();
+});
+
 function generateCoinMessage(coin, coinData) {
     // const coinData = data.data[coin.index];
     // console.log(coinData);
