@@ -1,503 +1,539 @@
 const coins = {
     ong: {
-        index: 0,
         name: "ong_usdt",
+        index: 0,
     },
     chr: {
-        index: 1,
         name: "chr_usdt",
+        index: 1,
     },
     qtum: {
-        index: 2,
         name: "qtum_usdt",
+        index: 2,
     },
     enj: {
-        index: 3,
         name: "enj_usdt",
+        index: 3,
     },
     cfx: {
-        index: 4,
         name: "cfx_usdt",
+        index: 4,
     },
     ren: {
-        index: 5,
         name: "ren_usdt",
+        index: 5,
     },
     ghst: {
-        index: 6,
         name: "ghst_usdt",
+        index: 6,
     },
     celr: {
-        index: 7,
         name: "celr_usdt",
+        index: 7,
     },
     ada: {
-        index: 8,
         name: "ada_usdt",
+        index: 8,
     },
     link: {
-        index: 9,
         name: "link_usdt",
+        index: 9,
     },
     pond: {
-        index: 10,
         name: "pond_usdt",
+        index: 10,
+    },
+    vgx: {
+        name: "vgx_usdt",
+        index: 11,
     },
     theta: {
-        index: 11,
         name: "theta_usdt",
+        index: 12,
     },
     egld: {
-        index: 12,
         name: "egld_usdt",
+        index: 13,
     },
     eos: {
-        index: 13,
         name: "eos_usdt",
+        index: 14,
     },
     ksm: {
-        index: 14,
         name: "ksm_usdt",
+        index: 15,
     },
     ustc: {
-        index: 15,
         name: "ustc_busd",
+        index: 16,
     },
     win: {
-        index: 16,
         name: "win_usdt",
+        index: 17,
     },
     ern: {
-        index: 17,
         name: "ern_usdt",
+        index: 18,
+    },
+    og: {
+        name: "og_usdt",
+        index: 19,
     },
     rare: {
-        index: 18,
         name: "rare_usdt",
-    },
-    sxp: {
-        index: 19,
-        name: "sxp_usdt",
+        index: 20,
     },
     aave: {
-        index: 20,
         name: "aave_usdt",
+        index: 21,
     },
     xmr: {
-        index: 21,
         name: "xmr_usdt",
+        index: 22,
+    },
+    algo: {
+        name: "algo_usdt",
+        index: 23,
+    },
+    ton: {
+        name: "ton_usdt",
+        index: 24,
     },
     dot: {
-        index: 22,
         name: "dot_usdt",
+        index: 25,
     },
     icp: {
-        index: 23,
         name: "icp_usdt",
+        index: 26,
     },
     xrp: {
-        index: 24,
         name: "xrp_usdt",
+        index: 27,
     },
     beta: {
-        index: 25,
         name: "beta_usdt",
+        index: 28,
     },
     mdx: {
-        index: 26,
         name: "mdx_usdt",
+        index: 29,
     },
     ooki: {
-        index: 27,
         name: "ooki_usdt",
+        index: 30,
     },
     iotx: {
-        index: 28,
         name: "iotx_usdt",
+        index: 31,
     },
     tlm: {
-        index: 29,
         name: "tlm_usdt",
+        index: 32,
     },
     eth: {
-        index: 30,
         name: "eth_usdt",
+        index: 33,
     },
     bnb: {
-        index: 31,
         name: "bnb_usdt",
+        index: 34,
     },
     qi: {
-        index: 32,
         name: "qi_usdt",
+        index: 35,
+    },
+    hbar: {
+        name: "hbar_usdt",
+        index: 36,
     },
     doge: {
-        index: 33,
         name: "doge_usdt",
+        index: 37,
     },
     ftm: {
-        index: 34,
         name: "ftm_usdt",
+        index: 38,
     },
     sand: {
-        index: 35,
         name: "sand_usdt",
+        index: 39,
     },
     uni: {
-        index: 36,
         name: "uni_usdt",
+        index: 40,
     },
     req: {
-        index: 37,
         name: "req_usdt",
+        index: 41,
+    },
+    op: {
+        name: "op_usdt",
+        index: 42,
     },
     xtz: {
-        index: 38,
         name: "xtz_usdt",
+        index: 43,
     },
     gmt: {
-        index: 39,
         name: "gmt_usdt",
+        index: 44,
     },
     luna: {
-        index: 40,
         name: "luna_usdt",
+        index: 45,
     },
     juv: {
-        index: 41,
         name: "juv_usdt",
+        index: 46,
     },
     spell: {
-        index: 42,
         name: "spell_usdt",
+        index: 47,
     },
     bch: {
-        index: 43,
         name: "bch_usdt",
+        index: 48,
     },
     vet: {
-        index: 44,
         name: "vet_usdt",
+        index: 49,
     },
     arb: {
-        index: 45,
         name: "arb_usdt",
+        index: 50,
     },
     sol: {
-        index: 46,
         name: "sol_usdt",
+        index: 51,
     },
     yfi: {
-        index: 47,
         name: "yfi_usdt",
+        index: 52,
     },
     pla: {
-        index: 48,
         name: "pla_usdt",
+        index: 53,
     },
     inch: {
-        index: 49,
-        name: "50inch_usdt",
+        name: "1inch_usdt",
+        index: 54,
     },
     id: {
-        index: 50,
         name: "id_usdt",
+        index: 55,
     },
     chess: {
-        index: 51,
         name: "chess_usdt",
+        index: 56,
     },
     kp3r: {
-        index: 52,
         name: "kp3r_usdt",
+        index: 57,
     },
     mana: {
-        index: 53,
         name: "mana_usdt",
+        index: 58,
     },
     vtho: {
-        index: 54,
         name: "vtho_usdt",
+        index: 59,
     },
     ftt: {
-        index: 55,
         name: "ftt_busd",
+        index: 60,
     },
     sun: {
-        index: 56,
         name: "sun_usdt",
+        index: 61,
     },
     comp: {
-        index: 57,
         name: "comp_usdt",
+        index: 62,
     },
     psg: {
-        index: 58,
         name: "psg_usdt",
+        index: 63,
     },
     woo: {
-        index: 59,
         name: "woo_usdt",
+        index: 64,
     },
     paxg: {
-        index: 60,
         name: "paxg_usdt",
+        index: 65,
     },
     qnt: {
-        index: 61,
         name: "qnt_usdt",
+        index: 66,
     },
     atom: {
-        index: 62,
         name: "atom_usdt",
+        index: 67,
     },
     alice: {
-        index: 63,
         name: "alice_usdt",
+        index: 68,
     },
     ankr: {
-        index: 64,
         name: "ankr_usdt",
+        index: 69,
     },
     omg: {
-        index: 65,
         name: "omg_usdt",
+        index: 70,
     },
     rndr: {
-        index: 66,
         name: "rndr_usdt",
+        index: 71,
     },
     dar: {
-        index: 67,
         name: "dar_usdt",
+        index: 72,
     },
     snx: {
-        index: 68,
         name: "snx_usdt",
+        index: 73,
     },
-    eth: {
-        index: 69,
+    ctsi: {
+        name: "ctsi_usdt",
+        index: 74,
+    },
+    et: {
         name: "eth_btc",
+        index: 75,
     },
     clv: {
-        index: 70,
         name: "clv_usdt",
+        index: 76,
     },
     trx: {
-        index: 71,
         name: "trx_usdt",
+        index: 77,
     },
     sfp: {
-        index: 72,
         name: "sfp_usdt",
+        index: 78,
     },
     ant: {
-        index: 73,
         name: "ant_usdt",
+        index: 79,
     },
     slp: {
-        index: 74,
         name: "slp_usdt",
+        index: 80,
+    },
+    apt: {
+        name: "apt_usdt",
+        index: 81,
     },
     ygg: {
-        index: 75,
         name: "ygg_usdt",
+        index: 82,
+    },
+    stx: {
+        name: "stx_usdt",
+        index: 83,
     },
     powr: {
-        index: 76,
         name: "powr_usdt",
+        index: 84,
     },
     busd: {
-        index: 77,
         name: "busd_usdt",
+        index: 85,
     },
     crv: {
-        index: 78,
         name: "crv_usdt",
+        index: 86,
     },
     knc: {
-        index: 79,
         name: "knc_usdt",
+        index: 87,
     },
     api3: {
-        index: 80,
         name: "api3_usdt",
+        index: 88,
     },
     flux: {
-        index: 81,
         name: "flux_usdt",
+        index: 89,
     },
     grt: {
-        index: 82,
         name: "grt_usdt",
+        index: 90,
     },
     axs: {
-        index: 83,
         name: "axs_usdt",
+        index: 91,
     },
     coti: {
-        index: 84,
         name: "coti_usdt",
+        index: 92,
     },
     front: {
-        index: 85,
         name: "front_usdt",
+        index: 93,
     },
     lrc: {
-        index: 86,
         name: "lrc_usdt",
+        index: 94,
     },
     ape: {
-        index: 87,
         name: "ape_usdt",
+        index: 95,
     },
     tfuel: {
-        index: 88,
         name: "tfuel_usdt",
+        index: 96,
     },
     iota: {
-        index: 89,
         name: "iota_usdt",
+        index: 97,
+    },
+    rdnt: {
+        name: "rdnt_usdt",
+        index: 98,
     },
     etc: {
-        index: 90,
         name: "etc_usdt",
+        index: 99,
     },
     people: {
-        index: 91,
         name: "people_usdt",
-    },
-    gala: {
-        index: 92,
-        name: "gala_usdt",
+        index: 100,
     },
     c98: {
-        index: 93,
         name: "c98_usdt",
+        index: 101,
     },
     cake: {
-        index: 94,
         name: "cake_usdt",
+        index: 102,
     },
     fil: {
-        index: 95,
         name: "fil_usdt",
+        index: 103,
     },
     matic: {
-        index: 96,
         name: "matic_usdt",
+        index: 104,
+    },
+    sui: {
+        name: "sui_usdt",
+        index: 105,
     },
     usdc: {
-        index: 97,
         name: "usdc_usdt",
+        index: 106,
     },
     shib: {
-        index: 98,
         name: "shib_usdt",
+        index: 107,
     },
     ltc: {
-        index: 99,
         name: "ltc_usdt",
+        index: 108,
     },
     dusk: {
-        index: 100,
         name: "dusk_usdt",
+        index: 109,
     },
     porto: {
-        index: 101,
         name: "porto_usdt",
+        index: 110,
     },
     jst: {
-        index: 102,
         name: "jst_usdt",
+        index: 111,
     },
     dodo: {
-        index: 103,
         name: "dodo_usdt",
+        index: 112,
     },
     mask: {
-        index: 104,
         name: "mask_usdt",
+        index: 113,
     },
     lunc: {
-        index: 105,
         name: "lunc_busd",
+        index: 114,
     },
     near: {
-        index: 106,
         name: "near_usdt",
+        index: 115,
     },
     ens: {
-        index: 107,
         name: "ens_usdt",
+        index: 116,
     },
     flow: {
-        index: 108,
         name: "flow_usdt",
+        index: 117,
     },
     avax: {
-        index: 109,
         name: "avax_usdt",
+        index: 118,
     },
     bat: {
-        index: 110,
         name: "bat_usdt",
+        index: 119,
     },
     santos: {
-        index: 111,
         name: "santos_usdt",
+        index: 120,
     },
     agld: {
-        index: 112,
         name: "agld_usdt",
+        index: 121,
     },
     lto: {
-        index: 113,
         name: "lto_usdt",
+        index: 122,
     },
     dash: {
-        index: 114,
         name: "dash_usdt",
+        index: 123,
     },
     sushi: {
-        index: 115,
         name: "sushi_usdt",
+        index: 124,
     },
     btc: {
-        index: 116,
         name: "btc_usdt",
+        index: 125,
     },
     high: {
-        index: 117,
         name: "high_usdt",
+        index: 126,
     },
     luna: {
-        index: 118,
         name: "luna_busd",
+        index: 127,
     },
     yfii: {
-        index: 119,
         name: "yfii_usdt",
+        index: 128,
     },
     bico: {
-        index: 120,
         name: "bico_usdt",
+        index: 129,
     },
     chz: {
-        index: 121,
         name: "chz_usdt",
+        index: 130,
     },
     dydx: {
-        index: 122,
         name: "dydx_usdt",
+        index: 131,
     },
     xlm: {
-        index: 123,
         name: "xlm_usdt",
+        index: 132,
     },
     ont: {
-        index: 124,
         name: "ont_usdt",
+        index: 133,
     },
 };
 
