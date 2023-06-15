@@ -14,7 +14,10 @@ const app = express();
 // Create a new Telegraf bot
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-bot.hears(Object.keys(keywords), async (ctx) => {
+const keywordsRegex = new RegExp(`^(${Object.keys(keywords).join("|")})$`, "i");
+
+
+bot.hears(keywordsRegex, async (ctx) => {
     const buttons = keywords[ctx.message.text.toLowerCase()];
     const inlineKeyboard = { inline_keyboard: buttons };
 
@@ -24,7 +27,10 @@ bot.hears(Object.keys(keywords), async (ctx) => {
 });
 
 // Define a command handler for messages that match the coins object keys
-bot.hears(Object.keys(coins), async (ctx) => {
+
+const coinRegex = new RegExp(`^(${Object.keys(coins).join("|")})$`, "i");
+
+bot.hears(coinRegex, async (ctx) => {
     try {
         const coinName = ctx.message.text.toLowerCase();
         const coin = coins[coinName];
@@ -35,7 +41,8 @@ bot.hears(Object.keys(coins), async (ctx) => {
 
             const response = await axios.get(process.env.API_ENDPOINT, optionsHeader);
 
-            const coinData = response.data.data[coin.index];
+            // const coinData = response.data.data[coin.index];
+            const coinData = response.data.data.find(e => e.name.split('_')[0] === coinName);
 
             // Format the message with the ticker data
             const message = generateCoinMessage(coin, coinData);
@@ -61,7 +68,7 @@ bot.hears(Object.keys(coins), async (ctx) => {
 });
 
 // Define a callback query handler for refresh button
-bot.action(Object.keys(coins), async (ctx) => {
+bot.action(coinRegex, async (ctx) => {
     try {
         const coinName = ctx.callbackQuery.data;
         const coin = coins[coinName];
@@ -73,7 +80,8 @@ bot.action(Object.keys(coins), async (ctx) => {
 
         // const result = response.json();
 
-        const coinData = response.data.data[coin.index];
+        // const coinData = response.data.data[coin.index];
+        const coinData = response.data.data.find(e => e.name.split('_')[0] === coinName);
 
         // Format the updated message with the new ticker data
         const message = generateCoinMessage(coin, coinData);
