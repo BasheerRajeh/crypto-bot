@@ -100,6 +100,7 @@ bot.action(coinRegex, async (ctx) => {
 
         // Send the message with the inline keyboard
         try {
+            await ctx.answerCbQuery();
             return await ctx.editMessageText(`\`${message}\``, options);
         } catch (error) {
             if (error.message.includes("message is not modified")) {
